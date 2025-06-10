@@ -1,0 +1,30 @@
+# config/config.yaml
+
+# List of test categories to include in the run.
+# Valid values: unit, integration, e2e, cli, perf
+enabled_tests:
+  - unit
+  #- integration
+  #- e2e
+
+# Output settings for reporting tools
+reporting:
+  use_allure: true
+  include_timestamp: true
+  output_dir: output
+
+# Environment settings (example structure)
+environment:
+  base_url: "http://localhost:8000"
+  db_uri: "sqlite:///tmp/test.db"
+  run_mode: "local"
+
+# Driver options: api, web, sql
+driver:
+  type: api
+  args: []
+
+# Reserved for future: performance monitoring, AI analysis, etc.
+features:
+  performance_tracking: false
+  ai_flake_classification: false
