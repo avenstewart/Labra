@@ -1,28 +1,24 @@
-# config/config.yaml
 
 # List of test categories to include in the run.
 # Valid values: unit, integration, e2e, cli, perf
-enabled_tests:
-  - unit
-  #- integration
-  #- e2e
+enabled_scope:
+  # web, api, smoke, full, unit, integration, e2e
+  - web
+  - smoke
+
+engine:
+  project_id: "callook-automation-demo"
+  test_root: "test/integration"
+  prometheus: false
+  logging: true
+
 
 # Output settings for reporting tools
 reporting:
-  use_allure: true
-  include_timestamp: true
-  output_dir: output
-
-# Environment settings (example structure)
-environment:
-  base_url: "http://localhost:8000"
-  db_uri: "sqlite:///tmp/test.db"
-  run_mode: "local"
-
-# Driver options: api, web, sql
-driver:
-  type: api
-  args: []
+  allure_enabled: true
+  allure_service: "http://localhost:5050"
+  include_timestamps: true
+  output_dir: "output/"
 
 # Reserved for future: performance monitoring, AI analysis, etc.
 features:
