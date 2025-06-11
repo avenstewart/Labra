@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 11 10:44:14 UTC 2025","Wed Jun 11 10:44:14 UTC 2025","335","test.integration","callsigns_test","","","","test_callsign_endpoint",""
+"passed","Wed Jun 11 11:04:12 UTC 2025","Wed Jun 11 11:04:16 UTC 2025","3716","test.integration","frontend_test","","","","test_callsign_lookup[chromium]",""
+"passed","Wed Jun 11 10:49:32 UTC 2025","Wed Jun 11 10:49:32 UTC 2025","278","test.integration","navigation_test","","","","test_homepage_navigation[chromium]",""
+"passed","Wed Jun 11 10:49:32 UTC 2025","Wed Jun 11 10:49:36 UTC 2025","3755","test.integration","navigation_test","","","","test_callsign_lookup[chromium]",""
+"passed","Wed Jun 11 11:04:12 UTC 2025","Wed Jun 11 11:04:12 UTC 2025","242","test.integration","frontend_test","","","","test_homepage_navigation[chromium]",""
