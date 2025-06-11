@@ -1,7 +1,8 @@
 image: python:3.11
 
 stages:
-  - run
+  - build
+  - test
   - upload
 
 variables:
@@ -18,7 +19,7 @@ before_script:
 run-tests:
   stage: run
   script:
-    - python src/labra/engine/runner.py
+    - python src/labra/testengine.py
     - zip -r $ALLURE_RESULTS_ZIP $ALLURE_RESULTS_DIR
   artifacts:
     paths:

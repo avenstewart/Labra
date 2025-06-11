@@ -12,15 +12,7 @@ CONFIG_PATH_DEFAULT = "config/config.yaml"
 
 
 def load_config(path):
-    """
-    Load YAML configuration from the specified path.
 
-    Args:
-        path (str): Path to the YAML config file.
-
-    Returns:
-        dict: Parsed configuration as a dictionary.
-    """
     with open(path, 'r') as f:
         return yaml.safe_load(f)
 
@@ -134,18 +126,15 @@ def main():
     output_folder = reporting_conf.get('output_dir')
     project_id = engine_conf.get('project_id')
     allure_service = reporting_conf.get('allure_service')
-    allure_enabled = reporting_conf.get('allure_enabled', True),
+    allure_enabled = reporting_conf.get('allure_enabled')
 
     # Begin tests
     run_tests(
         test_root=config.get('engine').get('test_root'),
         scope=enabled_scope,
         reports_dir=output_folder,
-        allure_enabled=allure_enabled,
+        allure_enabled=allure_enabled
     )
-
-    print("Sending to:", f"{allure_service}/send-results")
-    print("With project_id:", project_id)
 
     if allure_enabled:
         post_results_to_allure(output_folder, project_id, allure_service)

@@ -15,7 +15,7 @@ engine:
 
 # Output settings for reporting tools
 reporting:
-  allure_enabled: true
+  allure_enabled: false
   allure_service: "http://localhost:5050"
   include_timestamps: true
   output_dir: "output/"

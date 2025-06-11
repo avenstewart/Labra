@@ -1,0 +1,9 @@
+
+.idea/
+output/
+venv/
+allure-projects/*
+!allure-projects/.gitkeep
+__pycache__/
+*.pyc
+*.pyo
